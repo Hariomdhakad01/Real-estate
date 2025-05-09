@@ -32,7 +32,7 @@ const App = () => {
         <Route path="/form" element={<Form />} />
         <Route path="/pg" element={<Pg />} />        
     </Routes>
-    {/* <Footer/> */}
+    <Footer/>
   </Router>
   )
 }

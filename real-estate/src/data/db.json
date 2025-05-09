@@ -15,16 +15,62 @@
 
     },
     {
-      "id": "d86c",
-      "name": "a",
-      "location": "a"
+      "id": 2,
+      "name": "Villa",
+      "location": "Indore",
+      "type": "sell"
+
     },
     {
-      "id": "80b6",
-      "name": "mahanki",
-      "location": "ljhkjhk",
+      "id": 2,
+      "name": "Villa",
+      "location": "Indore",
       "type": "sell"
+
+    },
+    {
+      "id": 2,
+      "name": "Villa",
+      "location": "Indore",
+      "type": "sell"
+
+    },
+    {
+      "id": 2,
+      "name": "Villa",
+      "location": "Indore",
+      "type": "sell"
+
+    },
+    {
+      "id": 2,
+      "name": "Villa",
+      "location": "Indore",
+      "type": "sell"
+
+    },
+    {
+      "id": 2,
+      "name": "Villa",
+      "location": "Indore",
+      "type": "sell"
+
+    },
+    {
+      "id": 2,
+      "name": "Villa",
+      "location": "Indore",
+      "type": "sell"
+
+    },
+    {
+      "id": 2,
+      "name": "Villa",
+      "location": "Indore",
+      "type": "sell"
+
     }
+    
   ],
   "rooms": [
     {
@@ -93,76 +139,6 @@
     {
       "id": 10,
       "roomNo": 110,
-      "beds": 5,
-      "occupiedBeds": 5,
-      "vacant": false
-    },
-    {
-      "id": 11,
-      "roomNo": 111,
-      "beds": 3,
-      "occupiedBeds": 2,
-      "vacant": true
-    },
-    {
-      "id": 12,
-      "roomNo": 112,
-      "beds": 4,
-      "occupiedBeds": 3,
-      "vacant": true
-    },
-    {
-      "id": 13,
-      "roomNo": 113,
-      "beds": 2,
-      "occupiedBeds": 1,
-      "vacant": true
-    },
-    {
-      "id": 14,
-      "roomNo": 114,
-      "beds": 4,
-      "occupiedBeds": 4,
-      "vacant": false
-    },
-    {
-      "id": 15,
-      "roomNo": 115,
-      "beds": 3,
-      "occupiedBeds": 3,
-      "vacant": false
-    },
-    {
-      "id": 16,
-      "roomNo": 116,
-      "beds": 5,
-      "occupiedBeds": 2,
-      "vacant": true
-    },
-    {
-      "id": 17,
-      "roomNo": 117,
-      "beds": 3,
-      "occupiedBeds": 1,
-      "vacant": true
-    },
-    {
-      "id": 18,
-      "roomNo": 118,
-      "beds": 4,
-      "occupiedBeds": 4,
-      "vacant": false
-    },
-    {
-      "id": 19,
-      "roomNo": 119,
-      "beds": 2,
-      "occupiedBeds": 1,
-      "vacant": true
-    },
-    {
-      "id": 20,
-      "roomNo": 120,
       "beds": 5,
       "occupiedBeds": 5,
       "vacant": false

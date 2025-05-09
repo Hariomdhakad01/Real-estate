@@ -11,15 +11,17 @@ const PropertyList = () => {
   }, []);
 
   return (
-    <div>
-      <h2>Available Properties</h2>
-      <ul>
+    <div className="property-list-container">
+      <h2 className="property-list-title">Available Properties</h2>
+      <div className="property-grid">
         {properties.map((p) => (
-          <li key={p.id}>
-            {p.name} - {p.location} - Type: {p.type}
-          </li>  
+          <div className="property-item" key={p.id}>
+            <h3>{p.name}</h3>
+            <p><strong>Location:</strong> {p.location}</p>
+            <p><strong>Type:</strong> {p.type}</p>
+          </div>  
         ))}
-      </ul>
+      </div>
     </div>
   );
 };

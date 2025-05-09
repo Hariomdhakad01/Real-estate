@@ -17,71 +17,76 @@ const PGModule = () => {
     const baseAmount = beds * rate;
     const tax = baseAmount * 0.18;
     const finalAmount = baseAmount + tax;
-    setBill(
-      {
-       baseAmount,
-       tax,
-       finalAmount 
-      }
-    );
+    setBill({ baseAmount, tax, finalAmount });
   };
 
   return (
-    <div>
-      <h2>PG Module</h2>
-      <h3>Vacant Rooms</h3>
-      <ul>
-        {rooms.filter(r => r.vacant).map(r => (
-          <li key={r.roomNo}>Room {r.roomNo} is vacant</li>
-        ))}
-      </ul>
+    <div className="pg-wrapper">
+      <h2 className="pg-title">PG Management Module</h2>
 
-      
-      <h3>Room Occupancy</h3>
-      <table border="2px">
-        <thead>
-          <tr>
-            <th>Room</th>
-            <th>Total Beds</th>
-            <th>Occupied</th>
-            </tr>
-        </thead>
-        <tbody>
-          {rooms.map(r => (
-            <tr key={r.roomNo}>
-              <td>{r.roomNo}</td>
-              <td>{r.beds}</td>
-              <td>{r.occupiedBeds}</td>
-            </tr>
+      <section className="pg-section">
+        <h3 className="pg-subtitle">Vacant Rooms</h3>
+        <ul className="pg-vacant-list">
+          {rooms.filter(r => r.vacant).map(r => (
+            <li key={r.roomNo} className="pg-vacant-item">
+              Room {r.roomNo} is vacant
+            </li>
           ))}
-        </tbody>
-      </table>
+        </ul>
+      </section>
 
-    
-      <h3>Generate PG Monthly Bill</h3>
-      <input
-        type="number"
-        placeholder="Quantity of Beds"
-        value={beds}
-        onChange={e => setBeds(+e.target.value)}
-      />
-      <input
-        type="number"
-        placeholder="Price per Bed (₹)"
-        value={rate}
-        onChange={e => setRate(+e.target.value)}
-      />
-      <button onClick={generateBill}>Generate Bill</button>
+      <section className="pg-section">
+        <h3 className="pg-subtitle">Room Occupancy Details</h3>
+        <table className="pg-room-table">
+          <thead>
+            <tr>
+              <th>Room No</th>
+              <th>Total Beds</th>
+              <th>Occupied Beds</th>
+            </tr>
+          </thead>
+          <tbody>
+            {rooms.map(r => (
+              <tr key={r.roomNo}>
+                <td>{r.roomNo}</td>
+                <td>{r.beds}</td>
+                <td>{r.occupiedBeds}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </section>
 
-      {bill && (
-        <div style={{ marginTop: '20px' }}>
-          <p><strong>Beds:</strong> {beds}</p>
-          <p><strong>Price per Bed:</strong> ₹{rate}</p>
-          <p><strong>Base Amount:</strong> ₹{bill.baseAmount.toFixed(2)}</p>
-          <p><strong>Tax (18%):</strong> ₹{bill.tax.toFixed(2)}</p>
-          <p><strong>Final Amount:</strong> ₹{bill.finalAmount.toFixed(2)}</p>
-        </div>
-      )}
+      <section className="pg-section">
+        <h3 className="pg-subtitle">Generate Monthly Bill</h3>
+        <input
+          className="pg-input"
+          type="number"
+          placeholder="No. of Beds"
+          value={beds}
+          onChange={e => setBeds(+e.target.value)}
+        />
+        <input
+          className="pg-input"
+          type="number"
+          placeholder="Rate per Bed (₹)"
+          value={rate}
+          onChange={e => setRate(+e.target.value)}
+        />
+        <button className="pg-button" onClick={generateBill}>
+          Generate Bill
+        </button>
+
+        {bill && (
+          <div className="pg-bill-summary">
+            <p><strong>Beds:</strong> {beds}</p>
+            <p><strong>Rate per Bed:</strong> ₹{rate}</p>
+            <p><strong>Base Amount:</strong> ₹{bill.baseAmount.toFixed(2)}</p>
+            <p><strong>Tax (18%):</strong> ₹{bill.tax.toFixed(2)}</p>
+            <p><strong>Total Amount:</strong> ₹{bill.finalAmount.toFixed(2)}</p>
+          </div>
+        )}
+      </section>
     </div>
   );
 };

@@ -30,7 +30,7 @@ const AddPropertyForm = () => {
   };
 
   return (
-    <div>
+    <div className="form-container">
       <h2>Add Property (Buy / Sell / Rent)</h2>
       <form onSubmit={handleSubmit}>
         <input
